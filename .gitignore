@@ -39,10 +39,6 @@ _wpeprivate/
 wp-admin/
 
 /PLANT B
-
-/wp-content/themes/twentynineteen
-/wp-content/themes/twentytwenty
-/wp-content/themes/twentytwentyone
 /wp-content/themes/plantb/node_modules
 
 # plugins
@@ -86,6 +82,7 @@ wp-content/plugins/*
 /wp-content/themes/twentyseventeen
 /wp-content/themes/twentynineteen
 /wp-content/themes/twentytwenty
+/wp-content/themes/twentytwentyone
 /wp-content/themes/index.php
 
 # large/disallowed file types
