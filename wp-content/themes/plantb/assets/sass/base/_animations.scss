@@ -1,0 +1,92 @@
+/* ========================================== ANIMATIONS ========================================== */
+// move animation
+@include keyframes(move) {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+// slide out bottom animation
+@include keyframes(slide-out-bottom) {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+}
+
+// slide in bottom animation
+@include keyframes(slide-in-bottom) {
+  0% {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// fade in animation
+@include keyframes(fade-in) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// fade out animation
+@include keyframes(fade-out) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// alert coming animation
+@include keyframes(alert-in) {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// alert leaving animation
+@include keyframes(alert-out) {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+// preloader animation
+@include keyframes(wheel) {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

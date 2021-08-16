@@ -1,0 +1,16 @@
+.clearfix {
+  content: '';
+  clear: both;
+
+  &::after {
+    display: table;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.img-border {
+  border: 15px solid $greenDark;
+}

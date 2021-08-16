@@ -1,0 +1,57 @@
+.chart {
+  
+  & canvas {
+    max-width: 24rem;
+    margin: 0 auto 2rem;
+  }
+
+  & p {
+    max-width: 28rem;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    color: $colorWhite;
+  }
+
+  &__text {
+    width: 100%;
+    margin: 4rem auto 0;
+    font-size: 1.8rem;
+    text-align: center;
+    color: $colorWhite;
+    @include mQuery(SM) {
+      width: 80%;
+    }
+    @include mQuery(MD) {
+      width: 70%;
+    }
+
+    h3 {
+      font-size: 5rem;
+      font-weight: 600;
+    }
+
+    p {
+      width: 100%;
+      margin: 1rem auto 0;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 1.4;
+      @include mQuery(SM) {
+        width: 60%;
+      }
+    }
+
+    small {
+      display: block;
+      padding-top: 2rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+html {
+  font-size: $fontSize;
+}
+
+html,
+body {
+  font-family: $fontFamily;
+  font-weight: 300;
+  color: #555555;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.row {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 4%;
+  @include mQuery(SM) {
+    padding: 0 2%;
+  }
+  @include mQuery(LG) {
+    width: 1140px;
+    padding: 0;
+  }
+}

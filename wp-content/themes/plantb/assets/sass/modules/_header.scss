@@ -1,0 +1,61 @@
+.header {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  // select all direct siblings
+  & ~ *:not(.hero) {
+    position: relative;
+  }
+
+  & .hero-text {
+    width: 100%;
+    padding: 0 4%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mQuery(SM) {
+      padding: 0 2%;
+    }
+    @include mQuery(LG) {
+      width: 1140px;
+      padding: 0;
+    }
+  }
+
+  & h1 {
+    margin-bottom: .5rem;
+    color: $colorWhite;
+  }
+
+  & p {
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: $colorWhite;
+  }
+
+  & .btn {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__logo {
+    border: none !important;
+  }
+
+  & .logo {
+    width: auto;
+    height: 25px;
+    margin-top: 20px;
+    transition: all .3s ease-out;
+    @include mQuery(XS) {
+      height: 35px;
+    }
+    @include mQuery(SM) {
+      height: 45px;
+    }
+  }
+}

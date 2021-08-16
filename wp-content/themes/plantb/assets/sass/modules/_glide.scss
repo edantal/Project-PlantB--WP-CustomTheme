@@ -1,0 +1,172 @@
+.glide {
+  &__slider {
+    position: relative;
+    width: 100%;
+    direction: ltr;
+    box-sizing: border-box;
+
+    &--fixed {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    & * {
+      box-sizing: inherit;
+    }
+
+    & div {
+      outline: none;
+    }
+  
+    &__slide {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 100vh 0 0;
+      flex-shrink: 0;
+      white-space: normal;
+      user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+
+      & a {
+        user-select: none;
+      }
+
+      & .hero-text {
+        padding: 0 5rem;
+        @include mQuery(SM) {
+          padding: 0 4rem;
+        }
+      }
+    }
+  
+    &__clickarea {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      cursor: pointer;
+    }
+  
+    &__overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba($colorBlack, .7);
+      color: $colorWhite;
+      z-index: 20;
+    }
+  }
+
+  &__track {
+    overflow: hidden;
+  }
+  &__slides {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    touch-action: pan-Y;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    will-change: transform;
+
+    &--dragging {
+      user-select: none;
+    }
+  }
+
+  &--rtl {
+    direction: rtl;
+  }
+
+  // BULLETS
+  &__bullets {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    z-index: 100;
+    -webkit-touch-callout: none;
+    user-select: none;
+  
+    button {
+      display: inline-block;
+      text-indent: -9999px;
+      font-size: 0;
+      line-height: 0;
+      width: 10px;
+      height: 10px;
+      background-color: rgba($colorWhite, .5);
+      border-radius: 50%;
+      border: none;
+      margin: 0 3px;
+      padding: 0;
+      outline: none;
+      transition: background-color 0.3s ease-out;
+      cursor: pointer;
+  
+      &.glide__bullet--active {
+        background-color: $yellow;
+      }
+    }
+  }
+
+  // ARROWS
+  &__arrows {
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+
+  &__arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    padding: 9px 12px;
+    background-color: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: $yellow;
+    text-transform: uppercase;
+    line-height: 1;
+    opacity: 1;
+    transform: translateY(-50%);
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    cursor: pointer;
+    z-index: 2;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    &:hover {
+      color: darken($yellow, 20%);
+    }
+    &--left {
+      left: .5rem;
+    }
+    &--right {
+      right: .5rem;
+    }
+    &--disabled {
+      opacity: .33;
+    }
+  }
+
+}
+

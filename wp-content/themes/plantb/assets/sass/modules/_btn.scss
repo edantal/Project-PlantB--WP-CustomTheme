@@ -1,0 +1,71 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 0;
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: 300;
+    color: $colorWhite;
+    line-height: 1.3;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $greenLight;
+  }
+  
+  &__full {
+    &,
+    &:link,
+    &:visited {
+      background-color: $greenDark;
+      border: 1px solid $greenDark;
+      color: $colorWhite;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $greenLight;
+      border: 1px solid $greenLight;
+    }
+  }
+
+  &__ghost {
+    &,
+    &:link,
+    &:visited {
+      border: 1px solid $greenDark;
+      color: $greenDark;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $greenLight;
+      border: 1px solid $greenLight;
+      color: $colorWhite;
+    }
+
+    &--white {
+      &,
+      &:link,
+      &:visited {
+        border: 1px solid $colorWhite;
+        color: $colorWhite;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $greenLight;
+        border: 1px solid transparent;
+        color: $colorWhite;
+      }
+    }
+  }
+}

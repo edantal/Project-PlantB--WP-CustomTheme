@@ -1,0 +1,81 @@
+.sec {
+  padding: 9.6rem 0;
+  background-color: orangered;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto !important;
+  padding: 0 2rem;
+  @include mQuery(XS) {
+    padding: 0 3.2rem;
+  }
+
+  &--small {
+    max-width: 100rem;
+
+    &.grid {
+      gap: 2rem !important;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  column-gap: 4.8rem;
+  row-gap: 4.8rem;
+  @include mQuery(MD) {
+    row-gap: 6.4rem;
+  }
+  @include mQuery(LG) {
+    row-gap: 9.6rem;
+  }
+
+  // &:not(:last-child) {
+  //   margin-bottom: 9.6rem;
+  // }
+  
+  &--2-cols {
+    grid-template-columns: 1fr;
+    @include mQuery(SM) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--3-cols {
+    grid-template-columns: 1fr;
+    @include mQuery(SM) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mQuery(MD) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--4-cols {
+    grid-template-columns: 1fr;
+    @include mQuery(SM) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mQuery(MD) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &--center-v {
+    align-items: center;
+  }
+
+  &--no-gap {
+    gap: 0 !important;
+  }
+
+  &--even-gap {
+    gap: 4.8rem !important;
+  }
+
+  & .div {
+    padding: 250px 0 0;
+    background-color: purple;
+  }
+}

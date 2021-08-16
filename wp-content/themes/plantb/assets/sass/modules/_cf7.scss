@@ -1,0 +1,43 @@
+.wpcf7 {
+  & input[type="submit"] {
+    position: relative;
+
+    & + .ajax-loader {
+      margin: 0;
+      position: absolute;
+      bottom: -4rem;
+      right: 0;
+    }
+  }
+
+  & .screen-reader-response {
+    display: none;
+  }
+
+  & .wpcf7-not-valid-tip {
+    padding-top: 1rem;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: $yellow;
+  }
+
+  & .wpcf7-response-output {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: $yellow;
+  }
+
+  & .wpcf7-validation-errors {
+    margin: 1em 0.5em;
+    padding: 0.2em 1em 0;
+    border: none;
+    text-align: center;
+    color: $orange;
+  }
+
+  & .wpcf7-mail-sent-ok {
+    border: none;
+    text-align: center;
+    color: $greenLight;
+  }
+}

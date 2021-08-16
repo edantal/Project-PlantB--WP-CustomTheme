@@ -1,0 +1,27 @@
+.wpb_hero_slide:not(:last-child),
+.wpb_gallery_image:not(:last-child) {
+  border-bottom: 1px dotted #e6e6e6; }
+
+.wpb-vc-img-block {
+  display: block;
+  max-width: 100px;
+  padding-top: 5px; }
+
+.wpb-vc-h4-title {
+  margin: 1.33em 10px 1.33em 52px; }
+  .wpb-vc-h4-title > p {
+    margin: 0; }
+
+.wpb_slider_wrap > .wpb_element_wrapper,
+.wpb_gallery_wrap > .wpb_element_wrapper {
+  display: flex;
+  flex-direction: column-reverse; }
+
+.vc_admin_label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.wpb_content_element .wpb_element_title {
+  padding-bottom: 5px;
+}

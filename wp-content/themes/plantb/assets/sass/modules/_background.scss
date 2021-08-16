@@ -1,0 +1,26 @@
+.background {
+
+  &--black {
+    background-color: $colorBlack !important;
+
+    & h2,
+    & h3,
+    & p {
+      color: $colorWhite;
+    }
+  }
+
+  &--white { background-color: $colorWhite !important; }
+
+  &--offwhite { background-color: $colorOffwhite !important; }
+
+  &--green {
+    background-image: linear-gradient(to right bottom, $greenLight, $greenDark);
+
+    & h2,
+    & h3,
+    & p {
+      color: $colorWhite;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+.navigation {
+  position: relative;
+  z-index: 100;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    & .logo {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.main-nav-toggle {
+  display: none;
+  margin: 10px 15px 5px auto;
+  @include mQuery(SM) {
+    flex: 1;
+    margin: 30px 15px 0;
+  }
+  @include mQuery(MD) {
+    margin: 30px 30px 0;
+  }
+}
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  list-style: none;
+  @include mQuery(SM) {
+    flex-direction: row;
+    margin-top: -6px;
+  }
+  
+  & li {
+    display: block;
+    margin: 0 10px;
+    @include mQuery(SM) {
+      display: inline-block;
+    }
+
+    & a {
+      display: block;
+      padding: 10px 0;
+      border: 0;
+      font-size: 1.7rem;
+      color: $colorWhite;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all .2s ease-out;
+      @include mQuery(SM) {
+        padding: 8px 0;
+        border-bottom: 2px solid transparent;
+        font-size: 1.6rem;
+      }
+
+      &:hover {
+        border: 0;
+        @include mQuery(SM) {
+          border-bottom: 2px solid $orange;
+        }
+      }
+    }
+  }
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  background-color: rgba($colorBlack, .9);
+  z-index: 100;
+  transition: all .3s ease-out;
+
+  & .main-nav-toggle {
+    @include mQuery(SM) {
+      margin-top: 0px;
+    }
+  }
+
+  & .main-nav {
+    @include mQuery(SM) {
+      margin-top: 4px;
+    }
+  }
+
+  & li {
+    & a {
+      padding: 8px 0 11px;
+
+      &:hover {
+        border: 0;
+        @include mQuery(SM) {
+          border-bottom: 2px solid $orange;
+        }
+      }
+    }
+  }
+
+  & .logo {
+    height: 20px;
+    margin-top: 13px;
+  }
+
+  & .mobile-nav {
+    margin: 8px 0 2px;
+  }
+}
+
+.mobile-nav {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  margin: 20px 5px 10px 0;
+  background-color: transparent;
+  border: 0 !important;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  @include mQuery(SM) {
+    margin: 29px 5px 10px 0;
+  }
+
+  &:hover {
+    border: none;
+  }
+
+  & span {
+    width: 80%;
+    height: 4px;
+    margin: 0 auto;
+    display: block;
+    background-color: $colorWhite;
+    transition: all .8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition-delay: .2s;
+
+    &:first-of-type {
+      transform: rotate(45deg) translate(13px, 6px);
+    }
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+    &:last-of-type {
+      transform: rotate(-45deg) translate(-1px, 7px);
+    }
+  }
+  
+  &.active span {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+  }
+}

@@ -1,0 +1,13 @@
+/* 
+  Theme Name:     PlantB
+  Theme URI:      https://plantbimports.com
+  Author:         edanTal
+  Description:    PlantB Custom Wordpress Theme
+  Version:        1.0.0
+  License:        Custom
+  License URI:    https://plantbimports.com
+  Text Domain:    plantb
+  Tags: two-columns, left-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments, translation-ready, parallax, gliderjs
+*/
+
+@import "./bundled-assets/styles.34186bacf8d14bc2d2bb.css";

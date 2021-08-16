@@ -1,0 +1,26 @@
+.showcase {
+
+  width: 100%;
+
+  & figure {
+    width: 100%;
+    margin: 0;
+    background-color: $colorBlack;
+    line-height: 0;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: auto;
+      opacity: .7;
+      transform: scale(1.1);
+      transition: all .3s ease-out;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+}

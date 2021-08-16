@@ -1,0 +1,103 @@
+footer {
+  position: relative;
+  padding: 40px 0 0;
+  background-color: #111111;
+  z-index: 110;
+
+  & .footer {
+    &__nav {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+      @include mQuery(XS) {
+        flex-direction: row;
+        align-items: center;
+      }
+      @include mQuery(SM) {
+        justify-content: flex-start;
+      }
+
+      & li {
+        display: inline-block;
+        margin-bottom: 20px;
+        @include mQuery(XS) {
+          margin-bottom: 0;
+        }
+        
+        &:not(:last-child) {
+          @include mQuery(XS) {
+            margin-right: 20px;
+          }
+        }
+  
+        & a {
+          border: 0;
+          font-size: 1.8rem;
+          color: lighten($colorBlack, 40%);
+          text-decoration: none;
+          transition: all .2s ease-out;
+          @include mQuery(XS) {
+            font-size: 1.6rem;
+          }
+
+          &:hover {
+            border: 0;
+            color: $orange;
+          }
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      @include mQuery(SM) {
+        justify-content: flex-end;
+      }
+
+      & li {
+        display: inline-block;
+  
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+  
+        & a {
+          border: 0;
+          font-size: 1.8rem;
+          color: lighten($colorBlack, 40%);
+          text-decoration: none;
+          transition: all .2s ease-out;
+          @include mQuery(XS) {
+            font-size: 1.6rem;
+          }
+
+          &:hover {
+            border: 0;
+            color: $orange;
+          }
+        }
+      }
+    }
+
+    &__copyright {
+      margin-top: 20px;
+      padding: 20px 0;
+      background-color: $colorBlack;
+      @include mQuery(SM) {
+        margin-top: 40px;
+      }
+
+      & p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: lighten($colorBlack, 30%);
+        text-align: center;
+        letter-spacing: .5px;
+      }
+    }
+  }
+}

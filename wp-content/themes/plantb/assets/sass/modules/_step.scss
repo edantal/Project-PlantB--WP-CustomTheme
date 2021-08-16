@@ -1,0 +1,74 @@
+.steps {
+  &:first-child {
+    text-align: center;
+    @include mQuery(SM) {
+      padding-right: 2%;
+      text-align: right;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &:last-child {
+    padding-left: 2%;
+    counter-reset: number;
+    @include mQuery(SM) {
+      margin-top: 10px;
+    }
+    @include mQuery(MD) {
+      margin-top: 20px;
+    }
+  }
+
+  & .step {
+    position: relative;
+    max-width: 90%;
+    padding-left: 40px;
+    counter-increment: number;
+
+    &:not(:last-child){
+      margin-bottom: 20px;
+      @include mQuery(SM) {
+        margin-bottom: 30px;
+      }
+      @include mQuery(MD) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: counter(number)'';
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      padding: 4px;
+      border-radius: 50%;
+      border: 2px solid $orange;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $orange;
+      line-height: 1.1rem;
+      text-align: center;
+    }
+
+    & h4 {
+      margin-top: 0;
+      margin-bottom: .5rem;
+      font-size: 2rem;
+      line-height: 1.6;
+    }
+
+    & p {
+      font-size: 1.6rem;
+      line-height: 1.4;
+    }
+  }
+}

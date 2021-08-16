@@ -1,0 +1,122 @@
+/*
+---- TYPOGRAPHY SYSTEM --------------------------------------------------------------
+
+- font-size system (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- font-weights
+Default: 400
+
+- line-heights
+Default: 1
+
+- spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 45 / 64 / 80 / 96 / 128
+
+-------------------------------------------------------------------------------------
+*/
+
+a,
+a:not(.btn) {
+  color: $orange;
+  outline: none;
+  text-decoration: none;
+  border-bottom: 1px solid $orange;
+  transition: border .2s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  @include mQuery(SM) {
+    font-size: 4.8rem;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  @include mQuery(SM) {
+    font-size: 3.4rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include mQuery(SM) {
+    font-size: 2rem;
+  }
+}
+
+p {
+  &.long-copy {
+    width: 100%;
+    font-size: 1.8rem;
+    @include mQuery(SM) {
+      width: 80%;
+      margin-left: 10%;
+    }
+    @include mQuery(MD) {
+      width: 70%;
+      margin-left: 15%;
+    }
+  }
+}
+
+.text--white {
+  color: $colorWhite;
+}
+
+.section__header { // mostly h2
+  margin-bottom: 20px;
+  text-align: center;
+  @include mQuery(SM) {
+    margin-bottom: 30px;
+  }
+
+  &--green {
+    display: inline-block;
+    color: $greenDark;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    margin: 15px auto 0;
+    background-color: $orange;
+    @include mQuery(SM) {
+      margin: 25px auto 0;
+    }
+  }
+}
