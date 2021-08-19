@@ -97,26 +97,14 @@ p {
 }
 
 .section__header { // mostly h2
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
   @include mQuery(SM) {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 
   &--green {
     display: inline-block;
     color: $greenDark;
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 2px;
-    margin: 15px auto 0;
-    background-color: $orange;
-    @include mQuery(SM) {
-      margin: 25px auto 0;
-    }
   }
 }

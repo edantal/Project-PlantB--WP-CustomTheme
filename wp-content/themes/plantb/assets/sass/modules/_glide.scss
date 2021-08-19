@@ -36,13 +36,6 @@
       & a {
         user-select: none;
       }
-
-      & .hero-text {
-        padding: 0 5rem;
-        @include mQuery(SM) {
-          padding: 0 4rem;
-        }
-      }
     }
   
     &__clickarea {
@@ -62,7 +55,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: rgba($colorBlack, .7);
+      background-color: rgba($colorBlack, 0);
       color: $colorWhite;
       z-index: 20;
     }
@@ -141,7 +134,7 @@
     background-color: transparent;
     border: none;
     font-size: 2.5rem;
-    color: $yellow;
+    color: $colorBlack;
     text-transform: uppercase;
     line-height: 1;
     opacity: 1;
@@ -155,7 +148,7 @@
       box-shadow: none;
     }
     &:hover {
-      color: darken($yellow, 20%);
+      color: lighten($colorBlack, 10%);
     }
     &--left {
       left: .5rem;

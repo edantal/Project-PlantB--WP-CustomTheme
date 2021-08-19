@@ -1,0 +1,29 @@
+.hero {
+  &-text {
+    width: 50%;
+    padding: 0;
+    position: relative;
+    margin-top: 25vh;
+
+    & h1 {
+      margin-bottom: .5rem;
+      color: $colorBlack;
+
+      & span {
+        color: $greenDark;
+      }
+    }
+    
+    & p {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: $colorBlack;
+    }
+    
+    & .btn {
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+  }  
+}

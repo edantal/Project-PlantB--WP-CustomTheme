@@ -4,8 +4,8 @@
   &:visited {
     display: inline-block;
     padding: 10px 30px;
-    border: none;
-    border-radius: 0;
+    border: 0;
+    border-radius: 5rem;
     font-size: 1.6rem;
     font-family: inherit;
     font-weight: 300;
@@ -14,11 +14,6 @@
     text-decoration: none;
     transition: all .3s ease-out;
     cursor: pointer;
-  }
-
-  &:hover,
-  &:active {
-    background-color: $greenLight;
   }
   
   &__full {
@@ -32,8 +27,22 @@
 
     &:hover,
     &:active {
-      background-color: $greenLight;
-      border: 1px solid $greenLight;
+      background-color: $yellow;
+      border: 1px solid $yellow;
+      color: $greenDark;
+    }
+
+    &--white {
+      &,
+      &:link,
+      &:visited {
+        border-color: $colorWhite;
+      }
+
+      &:hover,
+      &:active {
+        border-color: $yellow;
+      }
     }
   }
 
@@ -41,14 +50,15 @@
     &,
     &:link,
     &:visited {
+      background-color: transparent;
       border: 1px solid $greenDark;
       color: $greenDark;
     }
 
     &:hover,
     &:active {
-      background-color: $greenLight;
-      border: 1px solid $greenLight;
+      background-color: $greenDark;
+      border: 1px solid $greenDark;
       color: $colorWhite;
     }
 
@@ -56,13 +66,14 @@
       &,
       &:link,
       &:visited {
+        background-color: transparent;
         border: 1px solid $colorWhite;
         color: $colorWhite;
       }
 
       &:hover,
       &:active {
-        background-color: $greenLight;
+        background-color: $greenDark;
         border: 1px solid transparent;
         color: $colorWhite;
       }

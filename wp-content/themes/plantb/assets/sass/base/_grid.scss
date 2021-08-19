@@ -62,6 +62,16 @@
     }
   }
 
+  &--5-cols {
+    grid-template-columns: 1fr;
+    @include mQuery(SM) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mQuery(MD) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
   &--center-v {
     align-items: center;
   }

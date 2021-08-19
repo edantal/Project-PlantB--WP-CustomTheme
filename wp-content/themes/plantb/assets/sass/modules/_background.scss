@@ -15,6 +15,26 @@
   &--offwhite { background-color: $colorOffwhite !important; }
 
   &--green {
+    background-color: $greenDark !important;
+
+    & h2,
+    & h3,
+    & p {
+      color: $colorWhite;
+    }
+  }
+
+  &--light-green {
+    background-color: $greenLight !important;
+
+    & h2,
+    & h3,
+    & p {
+      color: $colorWhite;
+    }
+  }
+
+  &--grad-green {
     background-image: linear-gradient(to right bottom, $greenLight, $greenDark);
 
     & h2,

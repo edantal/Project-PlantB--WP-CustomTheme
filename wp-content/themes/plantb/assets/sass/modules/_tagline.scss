@@ -1,0 +1,42 @@
+.tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: center;
+  padding: 0 6rem;
+  @include mQuery(XS) {
+    flex-direction: row;
+  }
+
+  &__stamp {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @include mQuery(XS) {
+      justify-content: flex-end;
+      width: 30%;
+    }
+
+    & img {
+      width: 100%;
+      max-width: 180px;
+      @include mQuery(XS) {
+        max-width: 220px;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+    margin: 4rem 0 0;
+    @include mQuery(XS) {
+      width: 70%;
+      margin: 0 0 0 4rem;
+    }
+  }
+}

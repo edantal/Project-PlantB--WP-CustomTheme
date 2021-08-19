@@ -50,7 +50,7 @@
       padding: 10px 0;
       border: 0;
       font-size: 1.7rem;
-      color: $colorWhite;
+      color: $colorBlack;
       text-decoration: none;
       text-transform: uppercase;
       transition: all .2s ease-out;
@@ -76,7 +76,7 @@
   left: 0;
   width: 100%;
   padding: 0;
-  background-color: rgba($colorBlack, .9);
+  background-color: rgba($yellow, .9666);
   z-index: 100;
   transition: all .3s ease-out;
 
@@ -126,7 +126,7 @@
   text-decoration: none;
   cursor: pointer;
   @include mQuery(SM) {
-    margin: 29px 5px 10px 0;
+    margin: 28px 5px 20px 0;
   }
 
   &:hover {
@@ -138,7 +138,7 @@
     height: 4px;
     margin: 0 auto;
     display: block;
-    background-color: $colorWhite;
+    background-color: $colorBlack;
     transition: all .8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
     transition-delay: .2s;
 
