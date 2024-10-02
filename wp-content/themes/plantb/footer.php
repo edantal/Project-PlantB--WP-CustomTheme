@@ -1,3 +1,17 @@
+    <!-- SECTION: CTA -->
+    <?php if( !is_page(76)) : ?>
+      <section class="section section__cta background--green">
+        <div class="container">
+          <div class="cta__action">
+            <h5>Let's Talk About <span>Your Expansion into Israel</span></h5>
+            <a class="btn btn__ghost--yellow" href="/contact">Get in touch</a>
+          </div>
+        </div>
+      </section>
+    <?php endif; ?>
+
+    
+    <!-- FOOTER -->
     <footer>
       <div class="container grid grid--2-cols">
         <div class="footer__content">
@@ -10,6 +24,9 @@
           <div class="footer__copyright">
             <p>Copyright &copy; <?php echo date("Y"); ?> <?php echo wp_get_theme()->get('Name'); ?></p>
           </div>
+          <!-- <div class="footer__design">
+            <p>Design by <a href="https://www.plain.co.il/" target="_blank">Plain.co.il</a></p>
+          </div> -->
         </div>
         <div class="footer__icon">
           <img src="<?php echo get_theme_file_uri('/assets/images/logo/plantb-footer-icon.svg'); ?>" alt="PlantB icon">

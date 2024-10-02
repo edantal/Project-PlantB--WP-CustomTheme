@@ -17,7 +17,8 @@ Default: 1
 */
 
 a,
-a:not(.btn) {
+a:not(.btn),
+a:not(.lnk) {
   color: $orange;
   outline: none;
   text-decoration: none;
@@ -101,6 +102,10 @@ p {
   text-align: center;
   @include mQuery(SM) {
     margin-bottom: 60px;
+  }
+
+  &--regular {
+    text-transform: initial;
   }
 
   &--green {

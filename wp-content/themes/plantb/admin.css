@@ -5,7 +5,13 @@
 .wpb-vc-img-block {
   display: block;
   max-width: 100px;
-  padding-top: 5px; }
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.wpb-vc-img-none {
+  display: none;
+}
 
 .wpb-vc-h4-title {
   margin: 1.33em 10px 1.33em 52px; }
@@ -25,3 +31,4 @@
 .wpb_content_element .wpb_element_title {
   padding-bottom: 5px;
 }
+

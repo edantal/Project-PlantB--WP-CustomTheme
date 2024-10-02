@@ -13,12 +13,14 @@ class MobileMenu {
   }
 
   openMenu() {
-    this.menu.slideToggle(200);
-    if(this.mobileMenu.hasClass('active')) {
-      this.mobileMenu.removeClass('active');
+    let $_self = this;
+
+    $_self.menu.slideToggle(200);
+    if($_self.mobileMenu.hasClass('active')) {
+      $_self.mobileMenu.removeClass('active');
     }
     else {
-      this.mobileMenu.addClass('active');
+      $_self.mobileMenu.addClass('active');
     }
   }
 }

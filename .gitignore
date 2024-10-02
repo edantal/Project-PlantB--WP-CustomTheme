@@ -16,6 +16,7 @@ yarn-error.log*
 # PhpStorm / vsCode
 .idea/*
 .vscode/*
+*vscode
 
 # dependencies
 /node_modules
@@ -87,6 +88,7 @@ wp-content/plugins/*
 
 # large/disallowed file types
 # a CDN should be used for these
+*.zip
 *.hqx
 *.bin
 *.exe

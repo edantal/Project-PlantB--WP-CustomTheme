@@ -1,39 +1,43 @@
 <?php
-  // function theme_taxonomies() {
-  //   register_taxonomy(
-  //     'property_type',
-  //     'property', array(
-  //       'hierarchical'    => true,
-  //       'label'           => 'Property Type',
-  //       'query_var'       => true,
-  //       'rewrite'         => array(
-  //         'slug'        => 'property',
-  //         'with_front'  => false
-  //       )
-  //     )
-  //   );
-  // }
-  // add_action('init', 'theme_taxonomies');
-
   // create custom post types
-  // function theme_post_types() {
-  //   register_post_type('property', array(
-  //     'supports'          => array('title', 'editor', 'excerpt', 'thumbnail'),
-  //     'rewrite'           => array('slug' => 'properties'),
-  //     'has_archive'       => false,
-  //     'public'            => true,
-  //     'labels'            => array(
-  //       'name'          => 'Properties',
-  //       'singular_name' => 'Property',
-  //       'add_new_item'  => 'Add new Property',
-  //       'edit_item'     => 'Edit Property',
-  //       'view_item'     => 'View Property',
-  //       'update_item'   => 'Update Property',
-  //       'all_items'     => 'All Properties',
-  //     ),
-  //     'menu_icon'         => 'dashicons-building',
-  //     'taxonomies'        => array('property_type'),
-  //   ));
-  // }
-  // add_action('init', 'theme_post_types');
+  function theme_post_types() {
+    register_post_type('brand', array(
+      'supports'          => array('title', 'editor', 'excerpt', 'thumbnail'),
+      'rewrite'           => array('slug' => 'brands'),
+      'has_archive'       => true,
+      'public'            => true,
+      'show_in_rest'      => true,
+      'labels'            => array(
+        'name'          => 'Brands',
+        'singular_name' => 'Brand',
+        'add_new_item'  => 'Add new Brand',
+        'edit_item'     => 'Edit Brand',
+        'view_item'     => 'View Brand',
+        'update_item'   => 'Update Brand',
+        'all_items'     => 'All Brands',
+      ),
+      'menu_icon'         => 'dashicons-groups',
+      'taxonomies'        => array('brand_type'),
+    ));
+
+    register_post_type('partner', array(
+      'supports'          => array('title', 'editor', 'excerpt', 'thumbnail'),
+      'rewrite'           => array('slug' => 'partners'),
+      'has_archive'       => true,
+      'public'            => true,
+      'show_in_rest'      => true,
+      'labels'            => array(
+        'name'          => 'Partners',
+        'singular_name' => 'Partner',
+        'add_new_item'  => 'Add new Partner',
+        'edit_item'     => 'Edit Partner',
+        'view_item'     => 'View Partner',
+        'update_item'   => 'Update Partner',
+        'all_items'     => 'All Partners',
+      ),
+      'menu_icon'         => 'dashicons-groups',
+      'taxonomies'        => array('partner_type'),
+    ));
+  }
+  add_action('init', 'theme_post_types');
 ?>

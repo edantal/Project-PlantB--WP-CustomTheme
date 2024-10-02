@@ -2,45 +2,36 @@
 
   &--black {
     background-color: $colorBlack !important;
-
-    & h2,
-    & h3,
-    & p {
-      color: $colorWhite;
-    }
+    color: $colorWhite;
   }
 
-  &--white { background-color: $colorWhite !important; }
+  &--white {
+    background-color: $colorWhite !important;
+    color: $greyDark;
+  }
 
-  &--offwhite { background-color: $colorOffwhite !important; }
+  &--offwhite {
+    background-color: $colorOffwhite !important;
+    color: $greyDark;
+  }
+
+  &--grey {
+    background-color: $greyDark !important;
+    color: $colorWhite;
+  }
 
   &--green {
     background-color: $greenDark !important;
-
-    & h2,
-    & h3,
-    & p {
-      color: $colorWhite;
-    }
+    color: $colorWhite;
   }
 
   &--light-green {
     background-color: $greenLight !important;
-
-    & h2,
-    & h3,
-    & p {
-      color: $colorWhite;
-    }
+    color: $colorWhite;
   }
 
   &--grad-green {
     background-image: linear-gradient(to right bottom, $greenLight, $greenDark);
-
-    & h2,
-    & h3,
-    & p {
-      color: $colorWhite;
-    }
+    color: $colorWhite;
   }
 }

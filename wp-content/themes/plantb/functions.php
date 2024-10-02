@@ -26,8 +26,8 @@
 		}
     else {
       wp_enqueue_script('theme_vendors_js', get_theme_file_uri('/bundled-assets/vendors.0fb4444437256e93066f.js'), NULL, '1.0', true);
-      wp_enqueue_script('theme_main_js', get_theme_file_uri('/bundled-assets/scripts.1cf3d0bba0ae98839d96.js'), NULL, '1.0', true);
-      wp_enqueue_style('theme_main_css', get_stylesheet_uri('/bundled-assets/styles.1cf3d0bba0ae98839d96.css'));
+      wp_enqueue_script('theme_main_js', get_theme_file_uri('/bundled-assets/scripts.15d3e86a6df4fa78ad26.js'), NULL, '1.0', true);
+      wp_enqueue_style('theme_main_css', get_stylesheet_uri('/bundled-assets/styles.15d3e86a6df4fa78ad26.css'));
     }
   }
   add_action('wp_enqueue_scripts', 'theme_files');

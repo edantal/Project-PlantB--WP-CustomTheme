@@ -85,8 +85,8 @@
 
   <!-- SECTION: TAGLINE -->
   <section class="section section__tagline background--white">
-    <div class="container tagline">
-      <div class="tagline__stamp">
+    <div class="container tagline tagline--1">
+      <div class="tagline__img">
         <img src="<?php echo get_theme_file_uri('/assets/images/icons/stamp.svg'); ?>" alt="Plant-based stamp">
       </div>
       <div class="tagline__text">
@@ -100,8 +100,8 @@
   <!-- SECTION: PARTNERS -->
   <section class="section section__partners background--light-green">
     <div class="container">
-      <h2 class="section__header">Our partners</h2>
-      <svg id="partners-filter">
+      <h2 class="section__header">Our brands</h2>
+      <svg id="partners-filter" class="svg-filter">
         <defs>
           <filter id="yellow-filter">
             <feColorMatrix
@@ -116,12 +116,16 @@
         </defs>
       </svg>
     </div>
-    <div class="container grid grid--5-cols">
+    <div class="container grid grid--4-cols">
       <div class="partner">
-        <img src="<?php echo get_theme_file_uri('/assets/images/partners/beyond-meat.svg'); ?>" alt="Beyond Meat">
+        <a href="/partners/beyond-meat">
+          <img src="<?php echo get_theme_file_uri('/assets/images/partners/beyond-meat.svg'); ?>" alt="Beyond Meat">
+        </a>
       </div>
       <div class="partner">
-        <img src="<?php echo get_theme_file_uri('/assets/images/partners/just.svg'); ?>" alt="JUST">
+        <a href="/partners/just">
+          <img src="<?php echo get_theme_file_uri('/assets/images/partners/just.svg'); ?>" alt="JUST">
+        </a>
       </div>
       <div class="partner">
         <img src="<?php echo get_theme_file_uri('/assets/images/partners/not-co.svg'); ?>" alt="Not co">
@@ -129,8 +133,35 @@
       <div class="partner">
         <img src="<?php echo get_theme_file_uri('/assets/images/partners/felsineo-veg.svg'); ?>" alt="Felsino Veg">
       </div>
-      <div class="partner">
-        <img src="<?php echo get_theme_file_uri('/assets/images/partners/mrs-goldfarbs.svg'); ?>" alt="Mrs. Goldfarb's Unreal Deli">
+      <!-- <div class="partner">
+        <img src="<?php // echo get_theme_file_uri('/assets/images/partners/mrs-goldfarbs.svg'); ?>" alt="Mrs. Goldfarb's Unreal Deli">
+      </div> -->
+    </div>
+  </section>
+
+  <!-- SECTION: PRESS -->
+  <section class="section section__press background--white">
+    <div class="container">
+      <h2 class="section__header section__header--regular">Israeli media love our brand partners</h2>
+    </div>
+    <div class="container press">
+      <div class="press__item">
+        <img src="<?php echo get_theme_file_uri('/assets/images/press/keshet-12.png'); ?>" alt="Keshet 12">
+      </div>
+      <div class="press__item">
+        <img src="<?php echo get_theme_file_uri('/assets/images/press/yediot-ahronot.png'); ?>" alt="Yediot Ahronot">
+      </div>
+      <div class="press__item">
+        <img src="<?php echo get_theme_file_uri('/assets/images/press/walla-news.png'); ?>" alt="Walla News">
+      </div>
+      <div class="press__item">
+        <img src="<?php echo get_theme_file_uri('/assets/images/press/israel-hayom.png'); ?>" alt="Israel Hayom">
+      </div>
+      <div class="press__item">
+        <img src="<?php echo get_theme_file_uri('/assets/images/press/time-out.png'); ?>" alt="Time Out">
+      </div>
+      <div class="press__item">
+        <img src="<?php echo get_theme_file_uri('/assets/images/press/reshet-13.png'); ?>" alt="Reshet 13">
       </div>
     </div>
   </section>
@@ -183,8 +214,8 @@
       <h2 class="section__header">Why PlantB?</h2>
     </div>
     <div class="container container--small grid grid--4-cols">
+      
       <div class="flipcard">
-
         <div class="flipcard__panel flipcard__panel--front">
           <img src="http://plantb.local/wp-content/uploads/2021/08/icon_e2e.svg">
           <h4>End to End Service</h4>
@@ -259,12 +290,16 @@
   </section>
 
   <!-- SECTION: DISTRIBUTION PARTNERS -->
-  <section class="section section__tagline background--black">
-    <div class="container">
-      <h2 class="section__header">Our distribution partners, only the best</h2>
-      <p class="long-copy">
-        The key to growing the plant-based food market is to deliver premium products to the mainstream consumer. To do this, we work with the major players in the Israeli food industry. We are partners with the largest distributors, food manufacturers and retail chains in Israel.
-      </p>
+  <section class="section section__tagline background--grey">
+    <div class="container tagline tagline--2">
+      <div class="tagline__img">
+        <img src="<?php echo get_theme_file_uri('/assets/images/icons/pos.svg'); ?>" alt="Plant-based stamp">
+      </div>
+      <div class="tagline__text">
+        <h2>Our distribution partners, only the best</h2>
+        <hr class="hr--text">
+        <p>The key to growing the plant-based food market is to deliver premium products to the mainstream consumer. To do this, we work with the major players in the Israeli food industry. We are partners with the largest distributors, food manufacturers and retail chains in Israel.</p>
+      </div>
     </div>
   </section>
 
@@ -502,7 +537,8 @@
       </div>
     </div>
   </section> -->
-
+  
+  <!-- SECTION: CTA -->
   <section class="section section__cta background--green">
     <div class="container">
       <div class="cta__action">

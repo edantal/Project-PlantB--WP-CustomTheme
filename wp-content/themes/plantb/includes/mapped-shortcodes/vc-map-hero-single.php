@@ -14,7 +14,29 @@
           'class'         => 'wpb-vc-img-block',
           'heading'       => __('Image'),
           'param_name'    => 'hero_img',
-          'description'   => __('Hero Image'),
+          'description'   => __('Hero Desktop Image'),
+        ),
+        array(
+          'type'          => 'checkbox',
+          'param_name' 	  => 'hero_mobile',
+          'description'   => 'Check box to use a different image for mobile',
+          'value'         => array(
+            _('Use mobile hero image?')   => 'true',
+          ),
+          'std'           => 'false'
+        ),
+        array(
+          'type'          => 'attach_image',
+          'holder'        => 'img',
+          'class'         => 'wpb-vc-img-none',
+          'heading'       => __('Image'),
+          'param_name'    => 'hero_img_mobile',
+          'description'   => __('Hero Mobile Image'),
+          'admin_label'   => false,
+          'dependency'    => array(
+            'element'        => 'hero_mobile',
+            'value'          => 'true'
+          ),
         ),
         array(
           'type'          => 'checkbox',
@@ -25,6 +47,7 @@
           ),
           'std'           => 'true'
         ),
+
         // title
         array(
           'type'          => 'textfield',
@@ -47,17 +70,53 @@
           'heading'       => __('Accent title'),
           'param_name'    => 'hero_accent_title',
           'description'   => __('Enter a the part of the title to accent'),
+          'edit_field_class' 	=> 'vc_col-sm-6',
           'dependency'    => array(
             'element'        => 'hero_accent_checkbox',
             'value'          => 'true'
           ),
         ),
+        array(
+          'type'              => 'colorpicker',
+          'heading'           => __('Accent color'),
+          'param_name'        => 'hero_accent_color',
+          'description'       => 'Choose a color for accent',
+          'edit_field_class' 	=> 'vc_col-sm-6',
+          'value'             => '#008155',
+          'dependency'        => array(
+            'element'        => 'hero_accent_checkbox',
+            'value'          => 'true'
+          ),
+        ),
+
         // text
         array(
           'type'          => 'textfield',
           'heading'       => __('Text'),
           'param_name'    => 'hero_text',
           'description'   => __('Enter short decription/text'),
+        ),
+        array(
+          'type'              => 'checkbox',
+          'param_name' 	      => 'hero_color_checkbox',
+          'description'       => 'Check box to customize title color',
+          'edit_field_class' 	=> 'vc_col-sm-6',
+          'value'             => array(
+            _('Customize color?')   => 'true',
+          ),
+          'std'               => 'false'
+        ),
+        array(
+          'type'              => 'colorpicker',
+          'heading'           => __('Text color'),
+          'param_name'        => 'hero_color',
+          'description'       => 'Choose a color for title',
+          'edit_field_class' 	=> 'vc_col-sm-6',
+          'value'             => '#212121',
+          'dependency'        => array(
+            'element'     => 'hero_color_checkbox',
+            'value'       => 'true'
+          ),
         ),
 
         // btn

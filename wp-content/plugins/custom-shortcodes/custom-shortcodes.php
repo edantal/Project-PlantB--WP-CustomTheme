@@ -20,9 +20,11 @@ class Custom_Shortcodes {
 
 	public function include_shortcodes_files() {
 		include_once('includes/section.php');
-		include_once('includes/header-single.php');
+		include_once('includes/hero-single.php');
+		include_once('includes/tagline.php');
 		include_once('includes/contact-us.php');
 		include_once('includes/contact-info.php');
+		include_once('includes/partner-single.php');
 	}
 
 	public function create_shortcode($shortcode_name, $shortcode_fun) {

@@ -95,9 +95,38 @@ footer {
 
       & p {
         font-size: 1.2rem;
-        font-weight: 400;
+        font-weight: 300;
         color: $colorBlack;
         letter-spacing: .5px;
+      }
+    }
+
+    // design
+    &__design {
+      display: none;
+      // display: flex;
+      // justify-content: center;
+      // margin-top: 1rem;
+      // @include mQuery(SM) {
+      //   justify-content: flex-start;
+      // }
+
+      & p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $colorBlack;
+        letter-spacing: .5px;
+      }
+
+      & a {
+        border: none;
+        color: inherit;
+
+        &:hover,
+        &:focus {
+          border: none;
+          color: $greenLight;
+        }
       }
     }
 

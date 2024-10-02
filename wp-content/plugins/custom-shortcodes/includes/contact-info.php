@@ -26,22 +26,35 @@
 				<h2><?php echo $contact_title; ?></h2>
 
 				<div class="cta__info-blocks">
-					<div class="cta__info-block">
-						<i class="fas fa-map-marker-alt"></i>
-						<p><?php echo $atts['contact_info_address']; ?></p>
-					</div>
-					<div class="cta__info-block">
-						<i class="fas fa-phone"></i>
-						<p><?php echo $atts['contact_info_phone']; ?></p>
-					</div>
-					<div class="cta__info-block">
-						<i class="fas fa-globe-africa"></i>
-						<p><a href="mailto:<?php echo $atts['contact_info_email1']; ?>"><?php echo $atts['contact_info_email1']; ?></a></p>
-					</div>
-					<div class="cta__info-block">
-						<i class="fas fa-globe-americas"></i>
-						<p><a href="mailto:<?php echo $atts['contact_info_email2']; ?>"><?php echo $atts['contact_info_email2']; ?></a></p>
-					</div>
+
+					<?php if($atts['contact_info_address']) : ?>
+						<div class="cta__info-block">
+							<i class="fas fa-map-marker-alt"></i>
+							<p><?php echo $atts['contact_info_address']; ?></p>
+						</div>
+					<?php endif; ?>
+					
+					<?php if($atts['contact_info_phone']) : ?>
+						<div class="cta__info-block">
+							<i class="fas fa-phone"></i>
+							<p><?php echo $atts['contact_info_phone']; ?></p>
+						</div>
+					<?php endif; ?>
+
+					<?php if($atts['contact_info_email1']) : ?>
+						<div class="cta__info-block">
+							<i class="fas fa-globe-africa"></i>
+							<p><a href="mailto:<?php echo $atts['contact_info_email1']; ?>"><?php echo $atts['contact_info_email1']; ?></a></p>
+						</div>
+					<?php endif; ?>
+
+					<?php if($atts['contact_info_email2']) : ?>
+						<div class="cta__info-block">
+							<i class="fas fa-globe-americas"></i>
+							<p><a href="mailto:<?php echo $atts['contact_info_email2']; ?>"><?php echo $atts['contact_info_email2']; ?></a></p>
+						</div>
+					<?php endif; ?>
+
 				</div>
 			</div>
 

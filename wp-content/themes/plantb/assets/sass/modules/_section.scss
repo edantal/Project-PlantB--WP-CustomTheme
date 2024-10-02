@@ -14,22 +14,15 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    
-    &:nth-of-type(1),
-    &:nth-of-type(2) {
-      margin-top: calc(-36px - 30px); // nav height - nav top/bottom margins
-      @include mQuery(SM) {
-        margin-top: calc(-36px - 48px);
-      }
+    background-attachment: scroll;
+    @include mQuery(XS) {
+      background-attachment: fixed;
     }
   }
 
   // TAGLINE SECTION
   &__tagline {
-    & p.long-copy {
-      text-align: center;
-    }
+    overflow: hidden;
   }
 
   // SHOWCASE SECTION

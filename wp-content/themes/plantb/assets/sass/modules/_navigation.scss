@@ -1,5 +1,7 @@
 .navigation {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
   z-index: 100;
 
   & .container {
@@ -47,15 +49,16 @@
 
     & a {
       display: block;
-      padding: 10px 0;
+      padding: 1rem;
       border: 0;
       font-size: 1.7rem;
       color: $colorBlack;
       text-decoration: none;
       text-transform: uppercase;
+      white-space: nowrap;
       transition: all .2s ease-out;
       @include mQuery(SM) {
-        padding: 8px 0;
+        padding: .8rem 1.2rem;
         border-bottom: 2px solid transparent;
         font-size: 1.6rem;
       }
@@ -94,7 +97,8 @@
 
   & li {
     & a {
-      padding: 8px 0 11px;
+      padding: .8rem 0 1.1rem;
+      background-color: unset;
 
       &:hover {
         border: 0;
@@ -125,6 +129,7 @@
   outline: none;
   text-decoration: none;
   cursor: pointer;
+  transition: all .3s ease-out;
   @include mQuery(SM) {
     margin: 28px 5px 20px 0;
   }

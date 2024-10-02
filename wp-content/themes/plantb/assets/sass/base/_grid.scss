@@ -1,14 +1,12 @@
-.sec {
-  padding: 9.6rem 0;
-  background-color: orangered;
-}
-
+/* ---- CONTAINER -------------------------------------------------------- */
 .container {
   max-width: 120rem;
   margin: 0 auto !important;
-  padding: 0 2rem;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
   @include mQuery(XS) {
-    padding: 0 3.2rem;
+    padding-left: 3.2rem !important;
+    padding-right: 3.2rem !important;
   }
 
   &--small {
@@ -20,6 +18,7 @@
   }
 }
 
+/* ---- GRID -------------------------------------------------------- */
 .grid {
   display: grid;
   column-gap: 4.8rem;
@@ -72,6 +71,17 @@
     }
   }
 
+  &--6-cols {
+    grid-template-columns: 1fr;
+    @include mQuery(SM) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mQuery(MD) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  /* ---- GRID MODIFIERS -------------------------------------------------------- */
   &--center-v {
     align-items: center;
   }
@@ -82,10 +92,5 @@
 
   &--even-gap {
     gap: 4.8rem !important;
-  }
-
-  & .div {
-    padding: 250px 0 0;
-    background-color: purple;
   }
 }

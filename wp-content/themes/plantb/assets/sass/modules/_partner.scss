@@ -1,3 +1,4 @@
+// partners main
 .partner {
   display: flex;
   justify-content: center;
@@ -6,6 +7,15 @@
   @include mQuery(SM) {
     padding: 1%;
     text-align: unset;
+  }
+
+  & a {
+    border: none;
+
+    &:hover,
+    &:focus {
+      border: none;
+    }
   }
 
   & img {
@@ -20,7 +30,111 @@
   }
 }
 
+// partner single
+.partner-single {
+  & > * {
+    margin-bottom: 3rem;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: lighten($greyDark, 45%);
+
+    & i {
+      padding: 0 .3rem;
+      font-size: .75em;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    & > * {
+      margin-bottom: 3rem;
+    }
+  }
+
+  & a.partner-single__link {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid transparent;
+    font-size: 1.4rem;
+    color: $greenDark;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $greenDark;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    @include mQuery(SM) {
+      justify-content: flex-start;
+    }
+
+    & li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.2rem;
+      height: 3.2rem;
+      background-color: $colorGrey;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $greyDark;
+      }
+
+      & a {
+        border: 0;
+        font-size: 1.6rem;
+        line-height: .5;
+        color: $colorWhite;
+        text-decoration: none;
+        transition: all .2s ease-out;
+        @include mQuery(XS) {
+          font-size: 1.6rem;
+        }
+
+        &:hover,
+        &:focus {
+          border: 0;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    filter: url(#black-filter);
+  }
+
+  &__slides-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__slides {
+    width: 28rem;
+    height: 28rem;
+  }
+
+}
+
 // hide svg filter
-#partners-filter {
-  display: none;
+.svg-filter {
+  opacity: 0;
+  height: 0;
 }

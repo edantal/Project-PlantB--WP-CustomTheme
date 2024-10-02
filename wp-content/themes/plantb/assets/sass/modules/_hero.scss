@@ -1,13 +1,22 @@
 .hero {
   &-text {
-    width: 50%;
+    width: 80%;
     padding: 0;
     position: relative;
-    margin-top: 25vh;
+    margin-top: 10vh;
+    color: $colorBlack;
+    @include mQuery(SM) {
+      width: 50%;
+      margin-top: 25vh;
+    }
 
     & h1 {
       margin-bottom: .5rem;
-      color: $colorBlack;
+      padding: 1rem 1.5rem;
+      color: inherit;
+      @include mQuery(SM) {
+        padding: 0;
+      }
 
       & span {
         color: $greenDark;
@@ -18,7 +27,10 @@
       margin-bottom: 1.5rem;
       font-size: 1.8rem;
       font-weight: 300;
-      color: $colorBlack;
+      color: inherit;
+      @include mQuery(SM) {
+        padding: 0;
+      }
     }
     
     & .btn {

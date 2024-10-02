@@ -1,42 +1,120 @@
 .tagline {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: stretch;
-  align-content: center;
-  padding: 0 6rem;
-  @include mQuery(XS) {
-    flex-direction: row;
-  }
 
-  &__stamp {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  // style 1: stamp
+  &--1 {
+    flex-direction: column;
+    align-items: stretch;
+    align-content: center;
+    padding: 0 6rem;
     @include mQuery(XS) {
-      justify-content: flex-end;
-      width: 30%;
+      flex-direction: row;
     }
 
-    & img {
+    & .tagline__img {
+      display: flex;
+      justify-content: center;
       width: 100%;
-      max-width: 180px;
       @include mQuery(XS) {
-        max-width: 220px;
+        justify-content: flex-end;
+        width: 30%;
+      }
+  
+      & img {
+        width: 100%;
+        max-width: 180px;
+        @include mQuery(XS) {
+          max-width: 220px;
+        }
+      }
+    }
+
+    & .tagline__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: flex-start;
+      width: 100%;
+      margin: 4rem 0 0;
+      @include mQuery(XS) {
+        width: 70%;
+        margin: 0 0 0 4rem;
       }
     }
   }
-
-  &__text {
-    display: flex;
+  
+  // style 2: points of sale
+  &--2 {
     flex-direction: column;
-    justify-content: center;
-    align-content: flex-start;
-    width: 100%;
-    margin: 4rem 0 0;
-    @include mQuery(XS) {
-      width: 70%;
-      margin: 0 0 0 4rem;
+    align-items: stretch;
+    @include mQuery(SM) {
+      flex-direction: row-reverse;
+    }
+
+    & .tagline__img {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 24rem;
+      @include mQuery(XS) {
+        margin-bottom: 28rem;
+      }
+      @include mQuery(SM) {
+        justify-content: flex-end;
+        width: calc(50% - 1rem);
+        margin-bottom: 0;
+      }
+  
+      & img {
+        position: absolute;
+        top: -2px;
+        width: 90vw;
+        max-width: 250px;
+        @include mQuery(XS) {
+          max-width: 320px;
+        }
+        @include mQuery(SM) {
+          max-width: 360px;
+        }
+        @include mQuery(MD) {
+          max-width: 380px;
+        }
+      }
+    }
+
+    & .tagline__text {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include mQuery(SM) {
+        width: calc(50% - 1rem);
+      }
+
+      & strong {
+        font-weight: 500;
+      }
+
+      & ul {
+        & li {
+          position: relative;
+          padding-left: 2rem;
+          margin-bottom: 1rem;
+
+          &::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            border-radius: 50%;
+            background-color: $greenDark;
+          }
+        }
+      }
+
     }
   }
+  
 }

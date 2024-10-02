@@ -19,7 +19,7 @@
       <nav class="navigation">
         <div class="container">
           <a href="/" class="header__logo">
-            <img src="<?php echo get_theme_file_uri('/assets/images/logo/plantb-logo-black.svg'); ?>" alt="PlantB logo" class="logo">
+            <img src="<?php echo get_theme_file_uri('/assets/images/logo/plantb-logo-dark.png'); ?>" alt="PlantB logo" class="logo">
           </a>
           <div class="main-nav-toggle">
             <?php

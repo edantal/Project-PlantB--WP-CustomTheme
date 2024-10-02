@@ -23,7 +23,7 @@ class StickyNav {
         handler: function() {
           $_self.mainNav.addClass('sticky-nav');
         },
-        offset: '25%'
+        offset: '75%'
       });
       
       new Waypoint({
