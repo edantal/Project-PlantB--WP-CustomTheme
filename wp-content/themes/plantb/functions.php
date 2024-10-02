@@ -14,7 +14,6 @@
     global $connection;
     // scripts
     wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', NULL, '3.5.1', true);
-    // wp_enqueue_script('googlemaps_js', '//maps.googleapis.com/maps/api/js?key=AIzaSyDMUh8pje59QWPEomq8bdArKmf74yDZni4', NULL, '2.0.1', true);
     
     // styles
     wp_enqueue_style('font_awesome', '//use.fontawesome.com/releases/v5.4.1/css/all.css');
